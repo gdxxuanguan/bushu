@@ -1,0 +1,1 @@
+class Watcher{constructor(t,e,s){this.vm=t,this.expr=e,this.cb=s,this.value=this.get()}get(){Dep.target=this;let t=this.getValue(this.vm,this.expr);return Dep.target=null,t}update(){let t=this.getValue(this.vm,this.expr);this.value!==t&&this.cb(t)}getValue(t,e){return e.split(".").reduce(((t,e)=>t[e]),t.$data)}}module.exports={Watcher};

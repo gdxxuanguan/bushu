@@ -1,0 +1,1 @@
+class MVVM{constructor(t){this.$el=t.el,this.$data=t.data,this.$el&&(new Observer(this.$data),new Compile(this.$el,this,0))}}
